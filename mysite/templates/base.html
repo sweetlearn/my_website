@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bootstrap 4 arabic ">
+    <meta name="author" content="Abdulwahed Mansour">
+
+    <!-- Arabic minified CSS -->
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+
+    <!-- Custom fontawesome-->
+    <link href="css/font_awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Almarai|Amiri|Cairo|Markazi+Text|Tajawal:200,400,700,900&display=swap&subset=arabic" rel="stylesheet">
+
+    <!-- Custom styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+
+    <title>{% block title %}الرئيسية{% endblock title %}</title>
+
+</head>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="{% url 'home' %}">الموقع الرئيسي</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">تغيير</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+				القائمة المنسدلة
+			  </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">الرابط الاول</a>
+                <a class="dropdown-item" href="#">الرابط الثاني</a>
+                <a class="dropdown-item" href="#">يمكن التجربة</a>
+            </div>
+        </li>
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        {% if user.is_authenticated %}
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ user.email }}
+              </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+                    <a class="dropdown-item" href='account_change_password'>Change password</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href='account_logout'>Log out</a>
+                </div>
+            </li>
+        </ul>
+        {% else %}
+        <form class="form-inline ml-auto">
+            <a href="#" class="btn btn-outline-secondary">تسجيل الدخول</a>
+            <a href="#" class="btn btn-primary ml-2">مستخدم جديد</a>
+        </form>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    
+    <div class="input-group mb-3">
+    	
+        <input type="text" class="form-control" placeholder="إضف كلمة البحث ...">
+        
+        <div class="input-group-append">
+                <button class="btn btn-success" type="submit">إضغط هنا</button>
+        </div>
+    	
+    </div>
+        
+  </div>
+</div>
+
+<div class="container">
+    {% block content %} ---ادخال الصفحات هنا ...{% endblock %}
+</div>
+
+<!-- Footer -->
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">&copy; 2020قع الرسمي 2019</a>
+</nav>
+
+<!-- Arabic JavaScript-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

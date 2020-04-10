@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700|Tajawal:200,300,400,500,700,800,900&display=swap&subset=arabic');
+
+body {
+    font-family: "Markazi Text","Helvetica Neue",serif;
+    font-size:1.2rem;
+    
+}
+
+
+h1 {
+	font-family: "Tajawal",Arial, Helvetica, sans-serif; 
+}
+
+h2 {
+    font-family: "Tajawal",Arial, Helvetica, sans-serif;
+}
+
+
+h3 {
+	font-family: "Tajawal",Arial, Helvetica, sans-serif; 
+}
+
+h4 {
+    font-family: "Tajawal",Arial, Helvetica, sans-serif;
+}
+
+
+h5 {
+	font-family: "Tajawal",Arial, Helvetica, sans-serif; 
+}
+
+h6 {
+    font-family: "Tajawal",Arial, Helvetica, sans-serif;
+}
+
