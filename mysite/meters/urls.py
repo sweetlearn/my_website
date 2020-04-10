@@ -1,9 +1,9 @@
 from django.urls import path, include
-from pages import views
+from meters import views
 
 
 
 urlpatterns = [
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
 
 ]

@@ -1,4 +1,7 @@
 from django.shortcuts import render
 
+
 def home(request):
-    return render(request, "meters/home.html", context=None)
+    template_name = "index.html"
+
+    return render(request, template_name, context=None)
