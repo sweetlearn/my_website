@@ -1,32 +1,3 @@
-
-
-@import url('https://fonts.googleapis.com/css?family=Markazi+Text:400,500,600,700&display=swap&subset=arabic');
-
-header {
-  padding: 156px 0 100px;
-}
-
-section {
-  padding: 150px 0;
-}
-
-h1 {
-	font-family: 'Markazi Text', serif;
-}
-
-h2 {
-	font-family: 'Markazi Text', serif;
-}
-
-
-p {
-	font-family: 'Markazi Text', serif;t
-	font-size: 1.3rem;
-}
-
-
-
-
 @font-face {
     font-family: 'Markazi Text';
     src: url('MarkaziText-Medium.woff2') format('woff2'),
@@ -71,3 +42,4 @@ p {
     font-weight: normal;
     font-style: normal;
 }
+
